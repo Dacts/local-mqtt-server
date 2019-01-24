@@ -13,9 +13,10 @@ String auth="Athp21R1aW1917I40N38mu296Oth345";//your auth key in app
 int port = 8080;// port number in settings in the app
 String output;
 void setup(){
-  pinMode(D2,OUTPUT);
-  pinMode(D3,OUTPUT);
-  pinMode(D4,OUTPUT);
+  pinMode(D2,OUTPUT); // Rgb -- red
+  pinMode(D3,OUTPUT); // Rgb -- green
+  pinMode(D4,OUTPUT); // Rgb -- blue
+  pinMode(D5,OUTPUT); // Slider value
   WiFi.mode(WIFI_OFF);        //Prevents reconnection issue 
   delay(1000);
   WiFi.mode(WIFI_STA);
@@ -42,9 +43,11 @@ void loop(){
           int r = root["Test RGB"]["r"];//name you registered for the rgb light here "Test RGB" is used change the name
           int g = root["Test RGB"]["g"];
           int b = root["Test RGB"]["b"];
+          int slider = root["Pwm SLider"];
           analogWrite(D2,r*4);
           analogWrite(D3,g*4);
           analogWrite(D4,b*4);
+          analogWrite(D5,slider); // slider value 0 to 1024
           delay(200);
 
 }
