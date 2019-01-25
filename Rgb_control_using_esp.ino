@@ -1,3 +1,46 @@
+/* 
+App connection instruction:
+Step 1 :
+1.Open the app and create a new project.Note the auth key in project menu page.
+2.Note the ip address of the Mobile which is running Dacts : mqtt server.
+3.Create buttons or slider by clicking Add Device button in home page.
+4.If you create PinButton named as D1 the output from the server wil be {"D1":1} or {"D1":0} (ON or OFF respectively).
+For Rgb Slider the output will be :
+{"Rgb_name":{"r":10,"g":20,"b":30}}
+For Slider the output will be :
+{"Slider_name":555}
+For imageButton the output will be:
+{"image_name":0} or {"image_name":1} (OFF or ON)
+......................................................
+
+Step 2 :
+1.Edit auth below.
+2.Edit wifiname and wifipassword
+3.Edit ip address.
+4.Edit port. below.
+
+......................................................
+Step 3 :
+1.Open the arduino ide and paste the below code .
+2 Edit the code in setup PinMode .
+3.Edit the code after json phrase with your name of button or slider. 
+4.Edit delay as you want.
+5.Update the code to Esp8266 or your arduino.
+.................................................................
+
+IMPORTANT NOTE:
+Both the mobile and devboards should be connected to the same network either 
+your Router or to your mobile hotspot.
+Because it runs a local server.
+
+Another Note:
+Make sure your Ide have the required library for your boards.
+Below code is for Node Mcu8266.
+The library used :
+1.Esp8266
+2.Arduino Json 
+
+*/
 #include <ESP8266WiFi.h>
 #include <WiFiClient.h> 
 #include <ESP8266HTTPClient.h>
