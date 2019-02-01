@@ -1,10 +1,11 @@
 // change ssid , password 
 /* 
 1.Also change the user key .. The user key will be in the project menu on the top right corner 
-of your project home page.
+of your project home page.(Line 21)
 2.Change the ip value to your mobile ip from your mobile settings 
-( Settings -> About phone - > Status ->IPaddress ) and paste it here in 18 th line.
+( Settings -> About phone - > Status ->IPaddress ) and paste it here in 20 th line.
 3.Upload.
+4.Create a pin button named ad D1.
 */
 #include <ESP8266WiFi.h>
 #include <WiFiClient.h> 
